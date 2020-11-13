@@ -1,0 +1,237 @@
+/* <!-------------------------------------------- This App Develeped By Muddy (Optimist#700) ------------------------------------------------------------->
+   <!------------------------------------------------------ All Rights Reserved ---------------------------------------------------------------------------> */
+
+/* Css For PG App */
+body{
+    background-color: darkorange;
+    margin: 0;
+}
+
+#container{
+
+    width: 100%;
+    height: 100%;
+    background-color: darkorange;
+    position: fixed;
+}
+
+#frame{
+
+    width: 100%;
+    height: 90%;
+    background-color: black;
+}
+
+#header{
+
+    width: 100%;
+    height: 25%;
+    background-color: darkorange;
+    
+}
+
+/* @media (min-width : 700px) {
+
+    #image{
+
+    margin-top: 1%;
+    width: 130px;
+    height: 130px;
+
+    }
+}
+
+
+@media (max-width : 700px) {
+
+    #image{
+    margin-top: 1%;
+    width: 25%;
+    height: 90%;
+
+    }
+    
+} */
+
+#image{
+
+    width: 25%;
+    height: 75%;
+    float: left;
+    background-color: darkkhaki;
+    border-radius: 50%;
+    margin-top: 2%;
+    /* width: 22%;
+    height: 99%; */
+
+    }
+    
+#title{
+
+    width: 70%;
+    height: 100%;
+    background-color: darkorange;
+    float: left;
+    padding-left: 5%;
+    
+}
+
+/* #dots{
+
+    color: darkorange;
+} */
+
+/* #app-Name{
+
+    width: 70%;
+    height: 100%;
+} */
+
+#quote{
+
+    font-size: medium;
+    font-style: initial;
+}
+
+#main-Area{
+    
+    width: 100%;
+    height: 80%;
+    background-color: palegoldenrod;
+    padding-top: 1%;
+    /* text-align: center; */
+}
+
+#output-Area{
+    
+    width: 100%;
+    height: 80%;
+    background-color: palegoldenrod;
+    padding-top: 1%;
+    text-align: center;   
+    padding-bottom: 2%;
+}
+
+#home-Area{
+    
+    width: 100%;
+    height: 80%;
+    background-color: palegoldenrod;
+    padding-top: 1%;
+    /* text-align: center;    */
+    padding-bottom: 2%;
+
+}
+
+#instruction{
+    text-align: center;
+    padding-top: 1%;
+}
+
+#introduction{
+    text-align: center;
+
+}
+
+#keys-Form{
+    
+    margin-right: 10%;
+    /* margin-top: 10%; */
+    text-align: right;
+
+}
+
+/* #keys-Form .keys{
+    height: 5%;
+
+} */
+
+#labels{
+    font-size: large;
+}
+
+.keys{
+    width: 50%;
+    /* height: 50%; */
+    height: 30px;
+    /* margin-right: 20%; */
+    border-radius: 5px;
+    margin-top: 1%;
+    
+}
+
+#start-Button{
+    
+    background-color: lawngreen;
+    width: 30%;
+    height: 7%;
+    margin-top: 10%;
+    float: right;
+    margin-right: 5%;
+    /* border-radius: 10px; */
+
+}
+
+#create-Button{
+    background-color: lawngreen;
+    width: 20%;
+    height: 7%;
+    /* margin-top: 0.5%; */
+    float: right;
+    margin-right: 10%;
+}
+
+.buttons{
+
+    border-radius: 10px;
+
+}
+
+#list{
+    /* text-align: center; */
+    /* list-style: none; */
+    margin-left: 20%;
+        
+}
+
+#introduction{
+
+    font-size: large;
+}
+
+#exit-Button{
+    
+    background-color: lawngreen;
+    width: 30%;
+    height: 7%;
+    float: right;
+    margin-right: 10%;
+
+}
+
+#footer{
+
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    /* padding-top: 1%; */
+    position: fixed;
+}
+
+#error1 , #error2 , #error3 , #error4 {
+    color: red;
+}
+
+
+/* 
+RollBack */
+
+
+
+
+
+
+/* <!-------------------------------------------- This App Develeped By Muddy (Optimist#700) ------------------------------------------------------------->
+   <!------------------------------------------------------ All Rights Reserved ---------------------------------------------------------------------------> */

@@ -1,0 +1,139 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<!-------------------------------------------- This App Develeped By Muddy (Optimist#700) ------------------------------------------------------------->
+<!------------------------------------------------------ All Rights Reserved --------------------------------------------------------------------------->
+
+<!------------------- Html Document For PG App -------------------------------->
+
+<!------------------- Head Starts Here -------------------------------------------->
+
+<head>
+    <meta charset="utf-8">
+    <title>PG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no  " />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!------------------- Css For The Document --------------------------------------->
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!------------------- Head Ends Here --------------------------------------------->
+
+
+<!------------------- Body Starts Here ------------------------------------------->
+
+<body onload="hideOutput()"> <!------------------- Bodys' Opening Tag----------------->
+    
+    <div id="container" >
+        <div id="frame" >
+            <div id="header">
+
+                <!-- <div id="img2" > -->
+                    <img id="image" src="assets/images/pgimage.png" />
+                <!-- </div> -->
+
+                <div id="title">
+                    <h1 id="app-Name">Password <br /> &nbsp; &nbsp; &nbsp;  Generator </h1>
+                    <!-- <br /> <span id="quote"> Your Security Is Our First Priority</span> -->
+                    <!-- </h3>Your Security Is Our First Priority<h3> -->
+                    <!-- <h5 id="Quote" >jj</h5> --><!-- <span id="dots">.......</span> -->
+                </div>
+            </div>
+
+            <div id="main-Area">
+                <h4 id="instruction" >Enter Your Keys To Generate A Strong Password <br /> Atleast Four Characters In Each Field </h4>
+
+                <form id="keys-Form" name="myForm">
+
+                    <label id="labels" >First Key: </label>  <input type="text" name="key1" class="keys" id="first-Key" placeholder="eg. mohamed" onchange = "error1Clear()"  ><br />
+                     <span id="error1"></span> <br />
+                    <label id="labels">Second Key: </label> <input type="text" name="key2" class="keys" id="second-Key" placeholder="eg. mfaume"  onchange = "error2Clear()"  ><br />
+                     <span id="error2"></span><br />
+                    <label id="labels"> Numbers : </label> <input type="text" name="key3" class="keys" id="numbers" placeholder="eg. 8712" onchange = "error3Clear()"  ><br />
+                     <span id="error3"></span> <br />
+                    <label id="labels">Characters: </label> <input type="text" name="key4" class="keys" id="characters"  placeholder="eg. @#*$" onchange = "error4Clear()"  ><br />
+                     <span id="error4"></span> <br />
+
+                </form>
+                     <input type="button" id="create-Button" class="buttons" value="Create" onclick=" keySetter() ; divSwitch()">
+
+            </div>
+            <div id="output-Area" >
+
+                <h3 id="instruction">Congratulation!, You May Choose Either Of The Following Passwords</h3>
+                <h3 id="password1" class="pwd">  </h3>
+                <h3 id="password2" class="pwd"> </h3>
+                <h3 id="password3" class="pwd"> </h3>
+                <h3 id="password4" class="pwd"> </h3>
+                <h3 id="password5" class="pwd"> </h3>
+                <a href = "index.html" ><input type="button" id="exit-Button" class="buttons"  value="Ok, Thanks"  ></a>
+
+
+            </div><div id="home-Area">
+                <h3 id="instruction" >Welcome To Our App</h3>
+                <p id="introduction">
+                &nbsp; &nbsp; Get A Strong Password In Less Than 2 Minutes, By Providing Only Four Things You Want To Include In Your Password As Listed Below,
+                </p>
+                <ul id="list">
+                    <li>First Word</li>
+                    <li>Second Word</li>
+                    <li>Numbers </li>
+                    <li>Special Characters </li>
+                </ul>
+
+            
+                <input type="button" id="start-Button" value="Get Started"  class="buttons" onclick="divSwitch()">
+            
+            
+            </div>
+        </div>
+
+        <div id="footer">
+                    <h3 id="message"><i>Powered By Brungas.com</i></h3>    <!--- Footer Message ------>
+        </div>
+    </div>
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------- Scripts For The Functions ----------------->
+
+    <script src="main.js"></script>
+
+</body>
+<!------------------- Body Ends Here----------------->
+
+</html>
+<!------------------- Ends Of Html Document For Caluu App----------------->
+
+
+<!-------------------------------------------- This App Develeped By Muddy (Optimist#700) ------------------------------------------------------------->
+<!------------------------------------------------------ All Rights Reserved --------------------------------------------------------------------------->

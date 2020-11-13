@@ -1,0 +1,237 @@
+// < !--------------------------------------------This App Develeped By Muddy(Optimist#700)------------------------------------------------------------->
+// < !------------------------------------------------------All Rights Reserved--------------------------------------------------------------------------->
+
+//JavaScript Codes For PG App
+
+//Global Declarations
+var main = document.getElementById("main-Area");
+var output = document.getElementById("output-Area");
+var home = document.getElementById("home-Area");
+var firstKey = document.getElementById("first-Key");
+var secondKey = document.getElementById("second-Key");
+var numbers = document.getElementById("numbers");
+var characters = document.getElementById("characters");
+var pass1 = document.getElementById("password1");
+var pass2 = document.getElementById("password2");
+var pass3 = document.getElementById("password3");
+var pass4 = document.getElementById("password4");
+var pass5 = document.getElementById("password5");
+var part1 , part2 , part3 , part4 , part5 , part6 , part7 , part8 , part9;
+var nextDiv ;
+
+// firstKey.value = '';
+// secondKey.value = '';
+// numbers.value = '';
+// characters.value = '';
+
+var key1 = document.getElementById("error1");
+var key2 = document.getElementById("error2");
+var key3 = document.getElementById("error3");
+var key4 = document.getElementById("error4");
+
+
+ function error1Clear(){
+     key1.innerHTML = "";
+ }
+
+function error2Clear() {
+    key2.innerHTML = "";
+}
+
+function error3Clear() {
+    key3.innerHTML = "";
+}
+
+function error4Clear() {
+    key4.innerHTML = "";
+}
+
+// function clearValues(){
+//     document.myForm.key1.value = '';
+//     document.myForm.key2.value = '';
+//     document.myForm.key3.value = '';
+//     document.myForm.key4.value = '';
+// }
+
+// nextDiv = '';
+
+function hideOutput(){
+
+    output.hidden = true;
+    main.hidden = true;
+    home.hidden = false ;
+    nextDiv = 'in';
+
+}
+
+function divSwitch(){
+
+    if (nextDiv === 'out') {
+
+        main.hidden = true;
+        home.hidden = true;
+        output.hidden = false;
+        nextDiv = 'home';
+        
+    } 
+    else if (nextDiv === 'in') {
+
+        output.hidden = true;
+        home.hidden = true;
+        main.hidden = false;
+        nextDiv = 'out';
+        
+    }
+    else if (nextDiv === 'home') {
+
+        output.hidden = true;
+        main.hidden = true;
+        home.hidden = false;
+        nextDiv = 'in';
+
+    }
+}
+
+function keySetter(){
+
+
+            //For First Key
+            if (firstKey.value === '' ) {
+
+                // alert( " Fill All The Fields");
+                nextDiv = 'in';
+                document.myForm.key1.focus();
+                key1.innerHTML = "This Field Must Be Filled";
+            }
+
+            else if (firstKey.value.length < 4 ) {
+
+                document.myForm.key1.focus();
+                key1.innerHTML = "Enter Atleast Four Characters";
+                nextDiv = 'in';
+            }
+
+            else if (!(/^[a-zA-Z]*$/.test(firstKey.value))) {
+
+                // document.getElementById("error1").innerHTML = " Enter A Valid Key";
+                nextDiv = 'in';
+                document.myForm.key1.focus();
+                key1.innerHTML = "Enter A Valid key      ";
+
+            }
+
+
+            //For Second Key
+            else if (secondKey.value === '') {
+
+                // alert( " Fill All The Fields");
+                nextDiv = 'in';
+                document.myForm.key2.focus();
+                key2.innerHTML = "This Field Must Be Filled";
+            }
+
+            else if (secondKey.value.length < 4) {
+
+                document.myForm.key2.focus();
+                key2.innerHTML = "Enter Atleast Four Characters";
+                nextDiv = 'in';
+            }
+
+            else if (!(/^[a-zA-Z]*$/.test(secondKey.value))) {
+
+                // document.getElementById("error1").innerHTML = " Enter A Valid Key";
+                nextDiv = 'in';
+                document.myForm.key2.focus();
+                key2.innerHTML = "Enter A Valid key      ";
+
+            }
+
+            //For Third Key
+            else if (numbers.value === '') {
+
+                // alert( " Fill All The Fields");
+                nextDiv = 'in';
+                document.myForm.key3.focus();
+                key3.innerHTML = "This Field Must Be Filled";
+            }
+
+            else if (numbers.value.length < 4) {
+
+                document.myForm.key3.focus();
+                key3.innerHTML = "Enter Atleast Four Characters";
+                nextDiv = 'in';
+            }
+
+            else if (!Number(numbers.value)) {
+
+                // document.getElementById("error1").innerHTML = " Enter A Valid Key";
+                nextDiv = 'in';
+                document.myForm.key3.focus();
+                key3.innerHTML = "Enter A Valid Number     ";
+
+            }
+
+            //For Fourth Key
+            else if (characters.value === '') {
+
+                // alert( " Fill All The Fields");
+                nextDiv = 'in';
+                document.myForm.key4.focus();
+                key4.innerHTML = "This Field Must Be Filled";
+            }
+
+            else if (characters.value.length < 4) {
+
+                document.myForm.key4.focus();
+                key4.innerHTML = "Enter Atleast Four Characters";
+                nextDiv = 'in';
+            }
+
+            else if (!(/^[@!~#$%&*?.,':)(?/);]*$/.test(characters.value))) {
+
+                // document.getElementById("error1").innerHTML = " Enter A Valid Key";
+                nextDiv = 'in';
+                document.myForm.key4.focus();
+                key4.innerHTML = "Enter Special Characters     ";
+
+            }
+
+            
+            else {
+
+            firstKey = firstKey.value;
+            secondKey = secondKey.value;
+            numbers = numbers.value;
+            characters = characters.value;
+
+            part1 = secondKey.charAt(secondKey.length - 2);
+            part2 = firstKey.charAt(1);
+            part9 = firstKey.charAt(0);
+            part3 = firstKey.charAt(firstKey.length-2);
+            part4 = secondKey.charAt(1);
+            part5 = numbers.charAt(0) ;
+            part6 = numbers.charAt(numbers.length-2);
+            part7 = characters.charAt(1) ;
+            part8 = characters.charAt(characters.length-2);
+
+            pass1.innerHTML = part1.toUpperCase() + part3 + part2 + part4 + part9.toUpperCase() + part6 + part7 + part5 ;
+
+            pass2.innerHTML = part5 + part4.toUpperCase() + part9 + part2 + part3.toUpperCase() + part1 + part6 + part8  ;
+
+            pass3.innerHTML = part8 + part1 + part3 + part2 + part9 + part5 + part4.toUpperCase() + part3.toUpperCase() ;
+
+            pass4.innerHTML = part1 + part3 + part4 + part6 + part7 + part3.toUpperCase() + part9 + part2 ;
+
+            pass5.innerHTML = part9.toUpperCase() + part1 + part2 + part5 + part4.toUpperCase() + part3 + part9 + part8;
+
+            // clearValues();
+            nextDiv = 'out' ;
+
+            }
+
+}
+
+
+
+// < !--------------------------------------------This App Develeped By Muddy(Optimist#700)------------------------------------------------------------->
+// < !------------------------------------------------------All Rights Reserved--------------------------------------------------------------------------->
